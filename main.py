@@ -21,6 +21,10 @@ if uploaded_file is not None:
   df = pd.read_csv(uploaded_file)
   st.write(df)
 st.write("OR")
+st.write("")
+st.write("")
+st.write("")
+st.write("Final Dataset")
 data
 
 st.subheader("Please select relevant features of your fish!")
