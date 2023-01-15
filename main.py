@@ -15,19 +15,23 @@ encoder.classes_ = np.load('classes.npy',allow_pickle=True)
 best_xgboost_model = xgb.XGBRegressor()
 best_xgboost_model.load_model("best_model.json")
 
-st.subheader("Dataset")
+st.subheader("A. Dataset")
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
   df = pd.read_csv(uploaded_file)
   st.write(df)
 st.write("OR")
+st.write("Input Data Column")
+input_horsepower = st.text_input('Horsepower : ')
+input_price = st.text_input('Price ($) : ')
+
 st.write("")
 st.write("")
 st.write("")
 st.write("Final Dataset")
 data
 
-st.subheader("Please select relevant features of your fish!")
+st.subheader("B. Masukkan Data Prediksi!")
 left_column, right_column = st.columns(2)
 with left_column:
     inp_species = st.radio(
