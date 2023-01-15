@@ -5,8 +5,8 @@ from sklearn.preprocessing import  LabelEncoder
 import xgboost as xgb
 import numpy as np
 st.header("Prediksi Harga Rumah Dengan Metode Decision Tree")
-st.text_input("Enter your Name: ", key="name")
-data = pd.read_csv("https://raw.githubusercontent.com/gurokeretcha/WishWeightPredictionApplication/master/Fish.csv")
+# st.text_input("Enter your Name: ", key="name")
+data = pd.read_csv("https://raw.githubusercontent.com/andreprisya/Prediksi-Harga-Mobil-Decision-Tree/main/Fish.csv")
 #load label encoder
 encoder = LabelEncoder()
 encoder.classes_ = np.load('classes.npy',allow_pickle=True)
@@ -15,8 +15,8 @@ encoder.classes_ = np.load('classes.npy',allow_pickle=True)
 best_xgboost_model = xgb.XGBRegressor()
 best_xgboost_model.load_model("best_model.json")
 
-if st.checkbox('Show Training Dataframe'):
-    data
+st.subheader("Dataset")
+data
 
 st.subheader("Please select relevant features of your fish!")
 left_column, right_column = st.columns(2)
@@ -41,7 +41,7 @@ if st.button('Make Prediction'):
     print("final pred", np.squeeze(prediction, -1))
     st.write(f"Your fish weight is: {np.squeeze(prediction, -1):.2f}g")
 
-    st.write(f"Thank you {st.session_state.name}! I hope you liked it.")
+    # st.write(f"Thank you {st.session_state.name}! I hope you liked it.")
     st.write(f"If you want to see more advanced applications you can follow me on [medium](https://medium.com/@gkeretchashvili)")
 
 
