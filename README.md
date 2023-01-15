@@ -1,4 +1,4 @@
-# Aplikasi Machine Learning dengan Metode Decision Tree Berbasis Web Application
+# Machine Learning Prediksi Harga Mobil dengan Metode Decision Tree Berbasis Web Application
 
 Kelompok:
 1. Andre Prisya Lubis
