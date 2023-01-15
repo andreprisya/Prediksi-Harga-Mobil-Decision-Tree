@@ -16,6 +16,11 @@ best_xgboost_model = xgb.XGBRegressor()
 best_xgboost_model.load_model("best_model.json")
 
 st.subheader("Dataset")
+uploaded_file = st.file_uploader("Choose a file")
+if uploaded_file is not None:
+  df = pd.read_csv(uploaded_file)
+  st.write(df)
+st.write("OR")
 data
 
 st.subheader("Please select relevant features of your fish!")
