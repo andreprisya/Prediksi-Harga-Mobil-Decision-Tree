@@ -24,6 +24,7 @@ st.write("OR")
 st.write("Input Data Column")
 input_horsepower = st.text_input('Horsepower : ')
 input_price = st.text_input('Price ($) : ')
+st.button('Input Data')
 
 st.write("")
 st.write("")
