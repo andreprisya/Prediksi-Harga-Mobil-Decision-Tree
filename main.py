@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import  LabelEncoder
 import xgboost as xgb
 import numpy as np
-st.header("Prediksi Harga Rumah Dengan Metode Decision Tree")
+st.header("Prediksi Harga Mobil Dengan Metode Decision Tree")
 # st.text_input("Enter your Name: ", key="name")
 data = pd.read_csv("https://raw.githubusercontent.com/andreprisya/Prediksi-Harga-Mobil-Decision-Tree/main/Fish.csv")
 #load label encoder
@@ -25,13 +25,12 @@ st.write("Input Data Column")
 input_horsepower = st.text_input('Horsepower : ')
 input_price = st.text_input('Price ($) : ')
 st.button('Input Data')
-
-st.write("")
-st.write("")
 st.write("")
 st.write("Final Dataset")
 data
 
+st.write("")
+st.write("")
 st.subheader("B. Masukkan Data Prediksi!")
 left_column, right_column = st.columns(2)
 with left_column:
