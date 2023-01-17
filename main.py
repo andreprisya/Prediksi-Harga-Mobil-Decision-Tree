@@ -38,12 +38,12 @@ with left_column:
         'Name of the fish:',
         np.unique(data['Species']))
 
-
-input_Length1 = st.slider('Vertical length(cm)', 0.0, max(data["Length1"]), 1.0)
-input_Length2 = st.slider('Diagonal length(cm)', 0.0, max(data["Length2"]), 1.0)
-input_Length3 = st.slider('Cross length(cm)', 0.0, max(data["Length3"]), 1.0)
-input_Height = st.slider('Height(cm)', 0.0, max(data["Height"]), 1.0)
-input_Width = st.slider('Diagonal width(cm)', 0.0, max(data["Width"]), 1.0)
+input_horsepower = st.text_input('Horsepower : ')
+# input_Length1 = st.slider('Vertical length(cm)', 0.0, max(data["Length1"]), 1.0)
+# input_Length2 = st.slider('Diagonal length(cm)', 0.0, max(data["Length2"]), 1.0)
+# input_Length3 = st.slider('Cross length(cm)', 0.0, max(data["Length3"]), 1.0)
+# input_Height = st.slider('Height(cm)', 0.0, max(data["Height"]), 1.0)
+# input_Width = st.slider('Diagonal width(cm)', 0.0, max(data["Width"]), 1.0)
 
 
 if st.button('Make Prediction'):
@@ -55,7 +55,7 @@ if st.button('Make Prediction'):
     st.write(f"Your fish weight is: {np.squeeze(prediction, -1):.2f}g")
 
     # st.write(f"Thank you {st.session_state.name}! I hope you liked it.")
-    st.write(f"If you want to see more advanced applications you can follow me on [medium](https://medium.com/@gkeretchashvili)")
+    # st.write(f"If you want to see more advanced applications you can follow me on [medium](https://medium.com/@gkeretchashvili)")
 
 
 
