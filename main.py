@@ -32,11 +32,12 @@ data
 st.write("")
 st.write("")
 st.subheader("B. Masukkan Data Prediksi!")
-left_column, right_column = st.columns(2)
-with left_column:
-    inp_species = st.radio(
-        'Name of the fish:',
-        np.unique(data['Species']))
+
+# left_column, right_column = st.columns(2)
+# with left_column:
+#     inp_species = st.radio(
+#         'Name of the fish:',
+#         np.unique(data['Species']))
 
 # input_Length1 = st.slider('Vertical length(cm)', 0.0, max(data["Length1"]), 1.0)
 # input_Length2 = st.slider('Diagonal length(cm)', 0.0, max(data["Length2"]), 1.0)
