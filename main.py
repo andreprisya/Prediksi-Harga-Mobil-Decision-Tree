@@ -8,7 +8,7 @@ import numpy as np
 
 st.header("Prediksi Harga Mobil Dengan Metode Decision Tree")
 # st.text_input("Enter your Name: ", key="name")
-data = pd.read_csv("https://raw.githubusercontent.com/andreprisya/Prediksi-Harga-Mobil-Decision-Tree/main/Car.csv")
+data = pd.read_csv("Car.csv")
 #load label encoder
 encoder = LabelEncoder()
 encoder.classes_ = np.load('classes.npy',allow_pickle=True)
