@@ -49,7 +49,7 @@ def main():
     x_train, x_test, y_train, y_test = train_test_split(data_cleaned,y, test_size=0.2, random_state=42)
     label_encoder = LabelEncoder()
     x_train['horsepower'] = label_encoder.fit_transform(x_train['horsepower'].values)
-    x_test['horsepower'] = label_encoder.fit_transform(x_test['horsepower'].values)
+    x_test['horsepower'] = label_encoder.transform(x_test['horsepower'].values)
     model_list = ["Decision_Tree","Random_Forest","XGboost_Regressor"]
     #%%
     result_scores = []
