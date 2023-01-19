@@ -4,9 +4,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import  LabelEncoder
 import xgboost as xgb
 import numpy as np
+import model
+import prediction as predict
+
 st.header("Prediksi Harga Mobil Dengan Metode Decision Tree")
 # st.text_input("Enter your Name: ", key="name")
-data = pd.read_csv("https://raw.githubusercontent.com/andreprisya/Prediksi-Harga-Mobil-Decision-Tree/main/Fish.csv")
+data = pd.read_csv("https://raw.githubusercontent.com/andreprisya/Prediksi-Harga-Mobil-Decision-Tree/main/Car.csv")
 #load label encoder
 encoder = LabelEncoder()
 encoder.classes_ = np.load('classes.npy',allow_pickle=True)
