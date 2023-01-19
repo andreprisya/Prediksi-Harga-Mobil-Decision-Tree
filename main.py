@@ -29,12 +29,15 @@ input_horsepower = st.text_input('Horsepower : ')
 input_price = st.text_input('Price ($) : ')
 
 if st.button('Input Data'):
-    with open('Car.csv','a') as fd:
-      fd.write(input_horsepower,input_price)
+    df_input = pd.DataFrame(
+      {
+        "horsepower":[input_horsepower],
+        "price":[input_price]})
+    df.append(df_input)
 
 st.write("")
 st.write("Final Dataset")
-data
+st.write(df)
 
 st.write("")
 st.write("")
