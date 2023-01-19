@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import  LabelEncoder
 import xgboost as xgb
 import numpy as np
+import csv
 
 
 st.header("Prediksi Harga Mobil Dengan Metode Decision Tree")
@@ -26,7 +27,11 @@ st.write("OR")
 st.write("Input Data Column")
 input_horsepower = st.text_input('Horsepower : ')
 input_price = st.text_input('Price ($) : ')
-st.button('Input Data')
+
+if st.button('Input Data'):
+    with open('Car.csv','a') as fd:
+      fd.write(input_horsepower,input_price)
+
 st.write("")
 st.write("Final Dataset")
 data
