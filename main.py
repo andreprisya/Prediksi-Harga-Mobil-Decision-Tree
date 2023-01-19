@@ -34,10 +34,11 @@ if st.button('Input Data'):
         "horsepower":[input_horsepower],
         "price":[input_price]})
     data.append(df_input)
+    st.write(data)
 
 st.write("")
 st.write("Final Dataset")
-st.write(data)
+
 
 st.write("")
 st.write("")
