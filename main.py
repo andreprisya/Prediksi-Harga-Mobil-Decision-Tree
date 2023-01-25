@@ -16,7 +16,7 @@ encoder.classes_ = np.load('classes.npy',allow_pickle=True)
 
 # load model
 best_xgboost_model = xgb.XGBRegressor()
-best_xgboost_model.load_model("best_model.json")
+best_xgboost_model.load_model("best_model.bin")
 
 st.subheader("A. Dataset")
 uploaded_file = st.file_uploader("Choose a file")
