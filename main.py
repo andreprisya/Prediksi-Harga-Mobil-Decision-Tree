@@ -56,7 +56,7 @@ st.subheader("B. Masukkan Data Prediksi!")
 # input_Height = st.slider('Height(cm)', 0.0, max(data["Height"]), 1.0)
 # input_Width = st.slider('Diagonal width(cm)', 0.0, max(data["Width"]), 1.0)
 
-input_prediksi_horsepower = st.text_input('Horsepower : ')
+input_prediksi_horsepower = st.text_input('Masukkan Horsepower : ')
 
 if st.button('Make Prediction'):
     # input_species = encoder.transform(np.expand_dims(inp_species, -1))
